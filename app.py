@@ -11,7 +11,7 @@ Alur satu prediksi:
 
 Jalankan lokal : python app.py            (http://localhost:7860)
 Google Colab   : import app; app.build_demo().launch(share=True)
-Hugging Face   : Space bertipe Gradio, app_file = app.py (lihat README)
+Render         : Web Service, build `pip install -r requirements.txt`, start `python app.py` (alternatif, lihat README)
 """
 import json
 import os

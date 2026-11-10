@@ -273,7 +273,7 @@ box(69, 26, 30, 10, "uts_analysis.py\n→ ood_detector.npz (fitur #3)\n→ calib
 arr(18.8, 31, 22.2, 31); arr(40.8, 31, 44.2, 31); arr(64.8, 31, 68.2, 31)
 box(1, 3, 22, 14, "Pengguna (guru/wali kelas)\nform 1 siswa atau CSV 1 kelas", LO)
 box(29, 3, 40, 14, "app.py (Gradio) + risk_engine.py (NumPy)\n1 validasi input & OOD  →  2 MLP  →  3 kalibrasi\n→ 4 confidence threshold  →  5 Integrated Gradients\n→ tingkat risiko + faktor + rekomendasi", LB)
-box(75, 3, 24, 14, "GitHub (source code)\n↓ git push\nHugging Face Spaces\n(Gradio SDK, CPU basic)", LG)
+box(75, 3, 24, 14, "GitHub (source code)\n↓ git clone\nGoogle Colab + Gradio\nshare link (gradio.live)", LG)
 arr(23.8, 10, 28.2, 10); arr(69.8, 10, 74.2, 10); arr(84, 25, 84, 17.8)
 ax.set_title("Arsitektur sistem dan alur deployment", fontsize=10)
 fig.tight_layout(); fig.savefig("figures/19_arsitektur_deployment.png"); plt.close(fig)
