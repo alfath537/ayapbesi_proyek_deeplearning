@@ -1,0 +1,19 @@
+{
+ "temperature": 0.2917982949304987,
+ "confidence_threshold": 0.75,
+ "risk_levels_calibrated": [
+  [
+   0.05197042954887961,
+   "Rendah"
+  ],
+  [
+   0.5,
+   "Sedang"
+  ],
+  [
+   1.01,
+   "Tinggi"
+  ]
+ ],
+ "note": "probabilitas terkalibrasi = sigmoid(logit(p)/temperature); di-fit pada data validation"
+}

@@ -1,0 +1,203 @@
+{
+ "numeric": [
+  "age",
+  "Medu",
+  "Fedu",
+  "traveltime",
+  "studytime",
+  "failures",
+  "famrel",
+  "freetime",
+  "goout",
+  "Dalc",
+  "Walc",
+  "health",
+  "absences",
+  "G1",
+  "G2"
+ ],
+ "binary": [
+  "school",
+  "sex",
+  "address",
+  "famsize",
+  "Pstatus",
+  "schoolsup",
+  "famsup",
+  "paid",
+  "activities",
+  "nursery",
+  "higher",
+  "internet",
+  "romantic"
+ ],
+ "nominal": [
+  "Mjob",
+  "Fjob",
+  "reason",
+  "guardian"
+ ],
+ "scaler_mean": [
+  16.704370179948587,
+  2.562982005141388,
+  2.3316195372750643,
+  1.583547557840617,
+  1.9537275064267352,
+  0.2570694087403599,
+  3.9074550128534704,
+  3.16452442159383,
+  3.185089974293059,
+  1.4987146529562982,
+  2.223650385604113,
+  3.544987146529563,
+  3.6041131105398456,
+  11.408740359897172,
+  11.498714652956298
+ ],
+ "scaler_scale": [
+  1.2221210550717068,
+  1.1311287681624125,
+  1.0971112802084897,
+  0.7731594852555103,
+  0.8193782443037252,
+  0.6616429250139286,
+  0.9602222060513658,
+  1.0604728501267857,
+  1.1524797472147188,
+  0.958320828641386,
+  1.2741673186512337,
+  1.4558301591452718,
+  4.53408497130918,
+  2.6953307635381107,
+  2.8153314001854426
+ ],
+ "binary_categories": {
+  "school": [
+   "GP",
+   "MS"
+  ],
+  "sex": [
+   "F",
+   "M"
+  ],
+  "address": [
+   "R",
+   "U"
+  ],
+  "famsize": [
+   "GT3",
+   "LE3"
+  ],
+  "Pstatus": [
+   "A",
+   "T"
+  ],
+  "schoolsup": [
+   "no",
+   "yes"
+  ],
+  "famsup": [
+   "no",
+   "yes"
+  ],
+  "paid": [
+   "no",
+   "yes"
+  ],
+  "activities": [
+   "no",
+   "yes"
+  ],
+  "nursery": [
+   "no",
+   "yes"
+  ],
+  "higher": [
+   "no",
+   "yes"
+  ],
+  "internet": [
+   "no",
+   "yes"
+  ],
+  "romantic": [
+   "no",
+   "yes"
+  ]
+ },
+ "nominal_categories": {
+  "Mjob": [
+   "at_home",
+   "health",
+   "other",
+   "services",
+   "teacher"
+  ],
+  "Fjob": [
+   "at_home",
+   "health",
+   "other",
+   "services",
+   "teacher"
+  ],
+  "reason": [
+   "course",
+   "home",
+   "other",
+   "reputation"
+  ],
+  "guardian": [
+   "father",
+   "mother",
+   "other"
+  ]
+ },
+ "feature_out": [
+  "num__age",
+  "num__Medu",
+  "num__Fedu",
+  "num__traveltime",
+  "num__studytime",
+  "num__failures",
+  "num__famrel",
+  "num__freetime",
+  "num__goout",
+  "num__Dalc",
+  "num__Walc",
+  "num__health",
+  "num__absences",
+  "num__G1",
+  "num__G2",
+  "bin__school_MS",
+  "bin__sex_M",
+  "bin__address_U",
+  "bin__famsize_LE3",
+  "bin__Pstatus_T",
+  "bin__schoolsup_yes",
+  "bin__famsup_yes",
+  "bin__paid_yes",
+  "bin__activities_yes",
+  "bin__nursery_yes",
+  "bin__higher_yes",
+  "bin__internet_yes",
+  "bin__romantic_yes",
+  "nom__Mjob_at_home",
+  "nom__Mjob_health",
+  "nom__Mjob_other",
+  "nom__Mjob_services",
+  "nom__Mjob_teacher",
+  "nom__Fjob_at_home",
+  "nom__Fjob_health",
+  "nom__Fjob_other",
+  "nom__Fjob_services",
+  "nom__Fjob_teacher",
+  "nom__reason_course",
+  "nom__reason_home",
+  "nom__reason_other",
+  "nom__reason_reputation",
+  "nom__guardian_father",
+  "nom__guardian_mother",
+  "nom__guardian_other"
+ ],
+ "bn_epsilon": 0.001
+}

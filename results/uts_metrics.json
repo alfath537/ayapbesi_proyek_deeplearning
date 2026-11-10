@@ -1,0 +1,342 @@
+{
+ "parity": {
+  "max_abs_diff_preprocessing": 0.0,
+  "test_metrics_engine": {
+   "accuracy": 0.8615,
+   "precision": 0.5357,
+   "recall": 0.75,
+   "f1": 0.625,
+   "roc_auc": 0.9182,
+   "pr_auc": 0.7026
+  },
+  "test_metrics_keras": {
+   "accuracy": 0.8615,
+   "precision": 0.5357,
+   "recall": 0.75,
+   "f1": 0.625,
+   "roc_auc": 0.9182,
+   "pr_auc": 0.7026
+  },
+  "p_baseline_engine": 0.2803,
+  "p_baseline_keras": 0.2803,
+  "ig_completeness_engine": 0.0005958104156889021,
+  "ig_global_top5_engine": {
+   "G2": 0.0866,
+   "G1": 0.0661,
+   "school": 0.0421,
+   "failures": 0.0233,
+   "absences": 0.0209
+  }
+ },
+ "engine": {
+  "latency_predict_ms": 3.495,
+  "latency_ig_ms": 0.09,
+  "batch_649_ms": 5.74,
+  "size_keras_kb": 112.5,
+  "size_npz_kb": 24.7,
+  "size_prep_joblib_kb": 7.6,
+  "size_prep_json_kb": 2.9
+ },
+ "ood": {
+  "method": "Ledoit-Wolf Mahalanobis (45 dim) + validasi aturan",
+  "threshold": 80.97,
+  "threshold_rule": "persentil ke-99 skor out-of-fold (5-fold) data training",
+  "shrinkage": 0.0685,
+  "scenarios": {
+   "Training (out-of-fold)": {
+    "n": 389,
+    "rule_rate": 0.0,
+    "mahal_rate": 0.0103,
+    "flag_rate": 0.0103,
+    "median_score": 38.6,
+    "confident_rate": 0.0283,
+    "mean_p": 0.3321
+   },
+   "Validation (asli)": {
+    "n": 130,
+    "rule_rate": 0.0,
+    "mahal_rate": 0.0,
+    "flag_rate": 0.0,
+    "median_score": 38.1,
+    "confident_rate": 0.0385,
+    "mean_p": 0.3252
+   },
+   "Testing (asli)": {
+    "n": 130,
+    "rule_rate": 0.0,
+    "mahal_rate": 0.0077,
+    "flag_rate": 0.0077,
+    "median_score": 38.7,
+    "confident_rate": 0.0462,
+    "mean_p": 0.3399
+   },
+   "Profil acak (nilai sah, kombinasi acak)": {
+    "n": 130,
+    "rule_rate": 0.0,
+    "mahal_rate": 1.0,
+    "flag_rate": 1.0,
+    "median_score": 256.0,
+    "confident_rate": 0.2462,
+    "mean_p": 0.3516
+   },
+   "Absensi ekstrem (40-93)": {
+    "n": 130,
+    "rule_rate": 0.0,
+    "mahal_rate": 1.0,
+    "flag_rate": 1.0,
+    "median_score": 265.6,
+    "confident_rate": 0.3923,
+    "mean_p": 0.1775
+   },
+   "Lonjakan nilai G1-G2 (>=12 poin)": {
+    "n": 130,
+    "rule_rate": 0.0,
+    "mahal_rate": 1.0,
+    "flag_rate": 1.0,
+    "median_score": 148.9,
+    "confident_rate": 0.0,
+    "mean_p": 0.4059
+   },
+   "Salah skala nilai (0-100)": {
+    "n": 130,
+    "rule_rate": 1.0,
+    "mahal_rate": 1.0,
+    "flag_rate": 1.0,
+    "median_score": 1183.6,
+    "confident_rate": 1.0,
+    "mean_p": 0.0
+   },
+   "Kolom diacak antarsiswa": {
+    "n": 130,
+    "rule_rate": 0.0,
+    "mahal_rate": 0.0538,
+    "flag_rate": 0.0538,
+    "median_score": 53.4,
+    "confident_rate": 0.0154,
+    "mean_p": 0.3263
+   }
+  }
+ },
+ "calibration": {
+  "temperature": 0.2918,
+  "fit_on": "validation (NLL)",
+  "confidence_threshold": 0.75,
+  "tau_rule": "tau terkecil dengan akurasi prediksi 'yakin' >= 95% pada data validation",
+  "ece_test_before": 0.1946,
+  "ece_test_after": 0.0877,
+  "brier_test_before": 0.1179,
+  "brier_test_after": 0.0953,
+  "nll_test_before": 0.3955,
+  "nll_test_after": 0.2913,
+  "ece_val_before": 0.2127,
+  "ece_val_after": 0.0927,
+  "predictions_unchanged": true,
+  "risk_cut_low_calibrated": 0.052,
+  "risk_levels_test": [
+   {
+    "tingkat": "Rendah",
+    "n": 69,
+    "berisiko_aktual": 0,
+    "pct_berisiko_aktual": 0.0,
+    "mean_p_raw": 0.1924,
+    "mean_p_cal": 0.0123
+   },
+   {
+    "tingkat": "Sedang",
+    "n": 33,
+    "berisiko_aktual": 5,
+    "pct_berisiko_aktual": 15.2,
+    "mean_p_raw": 0.4044,
+    "mean_p_cal": 0.2398
+   },
+   {
+    "tingkat": "Tinggi",
+    "n": 28,
+    "berisiko_aktual": 15,
+    "pct_berisiko_aktual": 53.6,
+    "mean_p_raw": 0.6274,
+    "mean_p_cal": 0.784
+   }
+  ],
+  "grid_val": [
+   {
+    "tau": 0.6,
+    "coverage": 0.9231,
+    "acc_confident": 0.8833,
+    "n_flagged": 10,
+    "err_flagged": 4,
+    "err_total": 18,
+    "acc_flagged": 0.6
+   },
+   {
+    "tau": 0.7,
+    "coverage": 0.8385,
+    "acc_confident": 0.9266,
+    "n_flagged": 21,
+    "err_flagged": 10,
+    "err_total": 18,
+    "acc_flagged": 0.5238
+   },
+   {
+    "tau": 0.75,
+    "coverage": 0.7692,
+    "acc_confident": 0.98,
+    "n_flagged": 30,
+    "err_flagged": 16,
+    "err_total": 18,
+    "acc_flagged": 0.4667
+   },
+   {
+    "tau": 0.8,
+    "coverage": 0.7538,
+    "acc_confident": 0.9796,
+    "n_flagged": 32,
+    "err_flagged": 16,
+    "err_total": 18,
+    "acc_flagged": 0.5
+   },
+   {
+    "tau": 0.85,
+    "coverage": 0.7462,
+    "acc_confident": 0.9794,
+    "n_flagged": 33,
+    "err_flagged": 16,
+    "err_total": 18,
+    "acc_flagged": 0.5152
+   },
+   {
+    "tau": 0.9,
+    "coverage": 0.6692,
+    "acc_confident": 0.9885,
+    "n_flagged": 43,
+    "err_flagged": 17,
+    "err_total": 18,
+    "acc_flagged": 0.6047
+   }
+  ],
+  "grid_test": [
+   {
+    "tau": 0.6,
+    "coverage": 0.8923,
+    "acc_confident": 0.8966,
+    "n_flagged": 14,
+    "err_flagged": 6,
+    "err_total": 18,
+    "acc_flagged": 0.5714
+   },
+   {
+    "tau": 0.7,
+    "coverage": 0.8385,
+    "acc_confident": 0.9174,
+    "n_flagged": 21,
+    "err_flagged": 9,
+    "err_total": 18,
+    "acc_flagged": 0.5714
+   },
+   {
+    "tau": 0.75,
+    "coverage": 0.8,
+    "acc_confident": 0.9327,
+    "n_flagged": 26,
+    "err_flagged": 11,
+    "err_total": 18,
+    "acc_flagged": 0.5769
+   },
+   {
+    "tau": 0.8,
+    "coverage": 0.7692,
+    "acc_confident": 0.93,
+    "n_flagged": 30,
+    "err_flagged": 11,
+    "err_total": 18,
+    "acc_flagged": 0.6333
+   },
+   {
+    "tau": 0.85,
+    "coverage": 0.7077,
+    "acc_confident": 0.9565,
+    "n_flagged": 38,
+    "err_flagged": 14,
+    "err_total": 18,
+    "acc_flagged": 0.6316
+   },
+   {
+    "tau": 0.9,
+    "coverage": 0.6615,
+    "acc_confident": 0.9651,
+    "n_flagged": 44,
+    "err_flagged": 15,
+    "err_total": 18,
+    "acc_flagged": 0.6591
+   }
+  ],
+  "uncertainty_compare": {
+   "auroc_err_margin_calibrated": 0.8626,
+   "auroc_err_mc_dropout_sd": 0.7569,
+   "acc_at_80pct_margin": 0.9327,
+   "acc_at_80pct_mc_dropout": 0.8942,
+   "acc_at_100pct": 0.8615,
+   "mc_dropout_T": 100,
+   "mc_mean_sd_correct": 0.0605,
+   "mc_mean_sd_wrong": 0.074,
+   "mc_test_accuracy": 0.8769,
+   "mc_test_roc_auc": 0.9186
+  }
+ },
+ "demo_cases": [
+  {
+   "keterangan": "Benar - siswa berisiko terdeteksi (TP)",
+   "G1": 7,
+   "G2": 0,
+   "G3": 0,
+   "p_raw": 0.9015,
+   "p_cal": 0.9995,
+   "status_input": "OK"
+  },
+  {
+   "keterangan": "Benar - siswa aman (TN)",
+   "G1": 18,
+   "G2": 19,
+   "G3": 19,
+   "p_raw": 0.0668,
+   "p_cal": 0.0001,
+   "status_input": "OK"
+  },
+  {
+   "keterangan": "Salah - alarm palsu (FP), G3 aktual >= 10",
+   "G1": 6,
+   "G2": 9,
+   "G3": 11,
+   "p_raw": 0.711,
+   "p_cal": 0.9563,
+   "status_input": "OK"
+  },
+  {
+   "keterangan": "Salah - terlewat (FN), G3 aktual < 10",
+   "G1": 7,
+   "G2": 8,
+   "G3": 8,
+   "p_raw": 0.4774,
+   "p_cal": 0.4231,
+   "status_input": "OK"
+  },
+  {
+   "keterangan": "Di luar domain - nilai ditulis skala 0-100 (DITOLAK)",
+   "G1": 85,
+   "G2": 90,
+   "G3": 12,
+   "p_raw": 0.0,
+   "p_cal": 0.0,
+   "status_input": "DITOLAK"
+  },
+  {
+   "keterangan": "Di luar domain - absensi 75 kali (PERINGATAN)",
+   "G1": 13,
+   "G2": 12,
+   "G3": 12,
+   "p_raw": 0.1352,
+   "p_cal": 0.0017,
+   "status_input": "DI LUAR DOMAIN"
+  }
+ ]
+}

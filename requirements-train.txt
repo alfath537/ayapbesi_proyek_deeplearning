@@ -1,0 +1,11 @@
+# dependensi pelatihan & analisis (notebook, train.py, export, uts_analysis.py)
+tensorflow>=2.16
+numpy
+pandas
+scikit-learn
+scipy
+joblib
+h5py
+matplotlib
+seaborn
+gradio>=5.0
